@@ -1,16 +1,6 @@
-# React + Vite
+# Frontend Mentor - Shortly URL shortening API Challenge
+Deployment link = https://project-1-si73.vercel.app/?#shorten
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project challenged me to combine responsive layout design with real API integration and browser storage, making it one of the most complete frontend applications I’ve built so far. I approached the project mobile-first, carefully structuring the HTML with semantic elements before layering in CSS. Recreating the layout from the design files required attention to spacing, background images, responsive breakpoints, and alignment details—especially the staggered feature cards and CTA section. I focused on building reusable utility classes, such as a shared .primary button style, to keep the styling consistent and maintainable across sections. As the layout grew, I refined my CSS organization to reduce duplication and improve readability.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The biggest challenge was integrating the Bitly API and managing local storage. Understanding how authorization headers worked and properly formatting the fetch request took some debugging and research. I also implemented a mock mode during development to avoid exhausting API requests, which helped me safely build and test the UI logic. Handling copy-to-clipboard interactions and ensuring saved links persisted after refresh required careful state management. If I were to improve this project further, I would move the API call to a small backend service to protect the API key, and refactor parts of the CSS into a more modular structure. Overall, this project significantly strengthened my confidence working with APIs, responsive layouts, and real-world application logic.
