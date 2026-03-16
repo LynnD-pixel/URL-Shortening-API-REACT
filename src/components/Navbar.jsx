@@ -1,9 +1,9 @@
-export default function Navbar({ menuOpen, toggleMenu, CloseMenu }) {
+export default function Navbar({ menuOpen, toggleMenu, closeMenu }) {
     return (
         <header className="header">
             <div className="header-inner">
                 <nav className="navbar" role="navigation" aria-label="Main navigation">
-                    <a href="#home" className="brand" aria-label="Shortly Home" onClick={CloseMenu}>
+                    <a href="#home" className="brand" aria-label="Shortly Home" onClick={closeMenu}>
                         <img src="/images/logo.svg" alt="Shortly logo" className="logo"/>
                     </a>
                     <button className="nav-toggle" type="button" aria-controls="navMenu" aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={toggleMenu}>
