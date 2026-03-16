@@ -83,14 +83,8 @@ export default function ShortenerForm({ addLink }) {
             Enter a URL to shorten
           </label>
 
-          <input
-            id="urlInput"
-            type="url"
-            placeholder="Shorten a link here..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className={error ? "input-error" : ""}
-          />
+          <input id="urlInput" type="url" placeholder="Shorten a link here..." value={inputValue} onChange={(e) => setInputValue(e.target.value)}
+            className={error ? "input-error" : ""}/>
 
           {error && (
             <span className="error" aria-live="polite">
