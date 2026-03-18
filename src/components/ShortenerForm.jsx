@@ -1,41 +1,11 @@
 import { useState } from "react";
-
-const BITLY_TOKEN = import.meta.env.VITE_BITLY_TOKEN;
+import { shortenWithBitly } from "../services/bitly";
+import { isValidUrl } from "../utils/validateUrl";
 
 export default function ShortenerForm({ addLink }) {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
-  function isValidUrl(value) {
-    try {
-      new URL(value);
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
-  async function shortenWithBitly(longUrl) {
-    const res = await fetch("https://api-ssl.bitly.com/v4/shorten", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${BITLY_TOKEN}`,
-      },
-      body: JSON.stringify({
-        long_url: longUrl,
-      }),
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
-      throw new Error(data?.message || "Bitly request failed");
-    }
-
-    return data.link;
-  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -62,11 +32,10 @@ export default function ShortenerForm({ addLink }) {
       const linkObj = {
         id: Date.now(),
         originalUrl: value,
-        shortUrl: shortUrl,
+        shortUrl,
       };
 
       addLink(linkObj);
-
       setInputValue("");
     } catch (err) {
       setError(err.message);

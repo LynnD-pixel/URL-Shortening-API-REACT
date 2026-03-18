@@ -231,7 +231,7 @@ body {
 /* Image block, background image */
 .hero-image {
   height: 320px;
-  background-image: url("./images/illustration-working.svg");
+  background-image: url("/images/illustration-working.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -278,7 +278,7 @@ body {
 
 #shortenForm {
   background: hsl(257, 27%, 26%);
-  background-image: url("./images/bg-shorten-mobile.svg");
+  background-image: url("/images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: cover;
@@ -338,7 +338,7 @@ body {
   }
 
   #shortenForm {
-    background-image: url("./images/bg-shorten-desktop.svg");
+    background-image: url("/images/bg-shorten-desktop.svg");
     padding: 36px;
     grid-template-columns: 1fr 180px;
     align-items: start;
@@ -590,7 +590,7 @@ body {
   color: white;
   text-align: center;
   padding: 80px 20px;
-  background-image: url("./images/bg-boost-mobile.svg");
+  background-image: url("/images/bg-boost-mobile.svg");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: cover;
@@ -665,7 +665,7 @@ body {
 @media (min-width: 900px) {
   .cta {
     padding: 90px 20px;
-    background-image: url("./images/bg-boost-desktop.svg");
+    background-image: url("/images/bg-boost-desktop.svg");
   }
 
   .cta h2 {
